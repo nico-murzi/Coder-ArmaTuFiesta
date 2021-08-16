@@ -1,0 +1,944 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+/*navegador*/
+#navegador ul {
+  background-color: #242320;
+  color: white;
+  font-size: x-large;
+  text-align: center;
+  list-style: none;
+  position: fixed;
+  width: 100%;
+  z-index: 500; }
+
+#navegador ul li {
+  display: inline-block;
+  position: relative; }
+
+#navegador ul ul {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  transition: opacity 1.5s;
+  list-style-type: none;
+  padding-left: 0;
+ }
+
+#navegador ul ul li {
+  display: block; }
+
+#navegador ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 15px 40px;
+  color: white; }
+
+a {
+  text-decoration: none; }
+
+#navegador ul li a:hover {
+  background-color: #a945c7;
+  transition: all .3s; }
+
+#navegador ul li:hover ul {
+  display: block;
+  visibility: visible;
+  opacity: 1; }
+
+/*navegador*/
+
+/*footer*/
+
+footer {
+  background: #AA46C8;
+  background: -webkit-linear-gradient(bottom, #AA46C8, #000000);
+  background: -moz-linear-gradient(bottom, #AA46C8, #000000);
+  background: linear-gradient(to top, #AA46C8, #000000);
+  color: black;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 15px;
+  flex-direction: column; }
+
+.DerechosReservados {
+  align-self: center;
+  justify-self: flex-end;
+  padding-top: 20px; }
+
+.Redes {
+  align-self: center;
+  justify-self: flex-start; }
+
+footer div a {
+  text-decoration: none;
+  color: white; }
+
+.redesContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-self: center;
+    z-index: 101;
+
+
+}
+
+.redesContainer ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.redesContainer ul li {
+    display: inline-block;
+    text-align: center;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+  
+
+}
+
+.redesContainer ul li a {
+  display: block;
+  padding: 0 10px;
+  background: #AA46C8;
+  color: #fff;
+  line-height: 50PX;
+  font-size: 18px;
+  box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.2);
+  transition: .2s;
+
+}
+
+.redesContainer ul:hover a {
+  filter: blur(2px);
+}
+
+.redesContainer ul li a:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.4);
+  filter: none
+}
+
+.redesContainer ul li .facebook:hover {
+  background: #3b5998;
+}
+
+.redesContainer ul li .twitter:hover {
+  background: #55acee;
+}
+
+.redesContainer ul li .instagram:hover {
+  background: #e4405f;
+}
+
+.redesContainer ul li .youtube:hover {
+  background: #bb0000;
+}
+
+
+
+
+/*footer*/
+/*QUIENES SOMOS*/
+.quienesSomos {
+  display: grid;
+  grid-template-areas: 'text1 logo' 'imagen text2';
+  justify-content: space-around;
+  align-items: center; }
+
+.mensajeQuienes {
+  width: 370px;
+  font-size: 16px;
+  text-align: left;
+  grid-area: text1;
+  padding-bottom: 100px;
+  border-bottom: 1px solid black; }
+
+.logo {
+  grid-area: logo;
+  padding-bottom: 100px; }
+
+.mensajeSueños {
+  width: 370px;
+  font-size: 16px;
+  text-align: right;
+  grid-area: text2;
+  align-self: flex-start;
+  padding-top: 100px; }
+
+.imagenFiestaVasos {
+  grid-area: imagen;
+  padding-top: 100px; }
+
+/*QUIENES SOMOS*/
+/*CONTACTO*/
+.contactoTitle {
+  text-align: center;
+  font-size: 100px;
+  padding-top: 200px;
+  padding-bottom: 50px; }
+
+.formulario {
+  display: grid;
+  grid-template-areas: 'nombre apellido' 'email email' 'textoconsulta textoconsulta'
+ 'consulta consulta' 'submit submit';
+  justify-content: center;
+  gap: 50px;
+  padding-bottom: 200px; }
+
+.formulario__nombre {
+  grid-area: nombre;
+  font-size: 30px;
+  color: white;
+  align-items: center;
+  justify-items: center;
+  justify-self: center; }
+
+.formulario__apellido {
+  grid-area: apellido;
+  font-size: 30px;
+  color: white;
+  justify-self: center; }
+
+.formulario__email {
+  grid-area: email;
+  font-size: 30px;
+  color: white;
+  align-items: center;
+  justify-self: center; }
+
+.formulario__consultaArea {
+  grid-area: consulta;
+  font-size: 30px;
+  color: white;
+  justify-self: center; }
+
+.consulta {
+  grid-area: textoconsulta;
+  justify-self: center;
+  font-size: 30px;
+  color: white; }
+
+.submit {
+  grid-area: submit;
+  justify-self: center; }
+
+/*CONTACTO*/
+/*ATF*/
+.formularioATF {
+  display: grid;
+  grid-template-areas: 'tusdatos tusdatos' 'nombreb apellidob' 'emailb emailb' 'tufiesta tufiesta' 'invitados donde' 'como como' 'opcion1 opcion1' 'pregunta2 pregunta2' 'opcion2 opcion2' 'pregunta3 pregunta3' 'opcion3 opcion3' 'ATF ATF' 'again again';
+  justify-content: center;
+  gap: 50px;
+  padding-bottom: 120px; }
+
+.formularioATF__tusDatos {
+  grid-area: tusdatos;
+  justify-self: center;
+  font-size: 120px;
+  padding-top: 120px; }
+
+.formularioATF__nombreb {
+  grid-area: nombreb;
+  justify-self: center;
+  font-size: 30px;
+  color: white; }
+
+.formularioATF__apellidob {
+  grid-area: apellidob;
+  justify-self: center;
+  font-size: 30px;
+  color: white; }
+
+.formularioATF__emailb {
+  grid-area: emailb;
+  justify-self: center;
+  font-size: 30px;
+  color: white; }
+
+.tuFiesta {
+  grid-area: tufiesta;
+  justify-self: center;
+  font-size: 120px;
+  padding-top: 120px; }
+
+.invitados {
+  grid-area: invitados;
+  justify-self: center;
+  font-size: 30px;
+  color: white; }
+
+.donde {
+  grid-area: donde;
+  justify-self: center;
+  font-size: 30px;
+  color: white; }
+
+.como {
+  grid-area: como;
+  justify-self: center;
+  font-size: 30px;
+  color: white; }
+
+.opcion1 {
+  grid-area: opcion1;
+  justify-self: center;
+  font-size: 20px;
+  color: white; }
+
+.pregunta2 {
+  grid-area: pregunta2;
+  justify-self: center;
+  font-size: 30px;
+  color: white; }
+
+.opcion2 {
+  grid-area: opcion2;
+  justify-self: center;
+  font-size: 20px;
+  color: white; }
+
+.pregunta3 {
+  grid-area: pregunta3;
+  justify-self: center;
+  font-size: 30px;
+  color: white; }
+
+.opcion3 {
+  grid-area: opcion3;
+  justify-self: center;
+  font-size: 20px;
+  color: white; }
+
+.ATF {
+  grid-area: ATF;
+  justify-self: center; }
+
+.again {
+  grid-area: again;
+  justify-self: center; }
+
+.titulo p {
+  text-align: center;
+  font-size: 30px; }
+
+/*ATF*/
+h1 {
+  color: #212225;
+  font-size: 100px;
+  font-family: 'Alfa Slab One', cursive;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+h2 {
+  color: white;
+  font-size: 60px;
+  font-family: 'Bebas Neue', cursive; }
+
+.cabecera__mensaje {
+  width: 20vw;
+  font-size: 25px;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  position: relative;
+  z-index: 200; }
+
+.cabecera__titulo {
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 500%;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: black;
+  width: 600PX;
+  padding: 0;
+  position: relative;
+  z-index: 200; }
+
+.imagenesProductos {
+  width: 300px;
+  height: auto;
+  padding-bottom: 100px; }
+
+div span p {
+  font-size: 20px;
+  text-align: center; }
+
+#section1Audio {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding-bottom: 100px; }
+
+#section1Audio span p {
+  color: white; }
+
+.videoExterno {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 150px;
+  padding-top: 150px; }
+
+/* NUESTROS COMBOS */
+
+.videoInicio {
+  width: 100%;
+  position: fixed;
+  object-fit: cover;
+  z-index: 100;
+  opacity: 0.3;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); 
+}
+
+
+.contenedorVideo {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+
+}
+
+.carousel-item {
+  position: relative;
+  display: none;
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 70%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.imagenesInicio {
+  width: 450px;
+  height: 300px;
+  border-radius: 25px; }
+
+.imagenesInicio:hover {
+  transform: scale(1.3);
+  transition: 2s; }
+
+#nuestrosCombos {
+  display: grid;
+  grid-template-areas: 'titulo titulo titulo'
+ 'imagen1 imagen2 imagen3'
+ 'imagen1 imagen2 imagen3'
+ 'imagen1 imagen2 imagen3'
+ 'desc1 desc2 desc3'
+ 'vermas vermas2 vermas3';
+  justify-content: space-around; }
+
+.ImagenPower {
+  grid-area: imagen1;
+  padding-bottom: 30px;
+  overflow: hidden;
+  border-radius: 25px;
+  height: 300px; }
+
+.ImagenCasamiento {
+  grid-area: imagen2;
+  overflow: hidden;
+  border-radius: 25px; }
+
+.Imagen15 {
+  grid-area: imagen3;
+  overflow: hidden;
+  border-radius: 25px; }
+
+.vermas {
+  grid-area: vermas2;
+  font-size: 35px;
+  text-align: center;
+  padding-top: 80px;
+  color: blanchedalmond; }
+
+.TitulosCombos {
+  grid-area: titulo;
+  text-align: center;
+  align-self: center;
+  padding-top: 200px;
+  font-size: 90px;
+  padding-bottom: 50px;
+  color: #dd94f3; }
+
+span a {
+  text-decoration: none;
+  color: #dd94f3; }
+
+.Desc1 {
+  grid-area: desc1;
+  justify-self: center;
+  font-size: 30px;
+  padding-top: 50px; }
+
+.Desc2 {
+  grid-area: desc2;
+  justify-self: center;
+  font-size: 30px;
+  padding-top: 50px; }
+
+.Desc3 {
+  grid-area: desc3;
+  justify-self: center;
+  font-size: 30px;
+  padding-top: 50px; }
+
+/* NUESTROS COMBOS */
+/* Division de estilos en secciones (desafio complementario)*/
+main {
+  background: #AA46C8;
+  background: -webkit-linear-gradient(top, #AA46C8, #000000);
+  background: -moz-linear-gradient(top, #AA46C8, #000000);
+  background: linear-gradient(to bottom, #AA46C8, #000000);
+  padding-top: 80px; }
+
+#cabecera {
+  display: flex;
+  height: 300px;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  z-index: 200; }
+
+#section2Home {
+  height: 1000px; }
+
+#pregunta {
+  display: flex;
+  height: 600px;
+  font-size: 60px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  color: white; 
+padding-bottom: 100px;
+z-index: 101;
+
+}
+
+#navegador ul ul {
+  padding-left: 0;
+}
+
+h4 {
+  font-size: 35px;
+  width: 40vw; }
+
+/*BOTON ARMA TU FIESTA*/
+.pregunta__BotonArmaTuFiesta {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0,2s;
+  color: violet;
+  border-radius: 20px;
+  z-index: 101;
+}
+
+.pregunta__BotonArmaTuFiesta:hover {
+  background: #a945c7;
+  box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7; }
+
+/* Solo lo aplico en el Home para mostrar lo aprendido*/
+/*MEDIA QUERIES*/
+@media (max-width: 768px) {
+  nav ul li {
+    font-size: 16px; }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap; }
+  .cabecera__titulo {
+    font-size: 80px;
+    text-align: center; }
+  section div p {
+    display: none; }
+  #nuestrosCombos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+  .vermas {
+    display: none; }
+  #section2Home {
+    height: 1200px;
+    width: 768px; }
+  #cabecera {
+    width: 768px; }
+  #pregunta {
+    display: flex;
+    height: 300px;
+    width: 768px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+  section h3 {
+    font-size: 24px;
+    width: 600px;
+    text-align: center; } }
+
+@media (max-width: 320px) {
+  nav ul li {
+    font-size: 16px; }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+  nav ul li ul {
+    display: none; }
+  #navegador ul {
+    width: 100%;
+    background-color: #1a1818;
+    position: relative; }
+  h1 {
+    font-size: 60px; }
+  .cabecera__titulo {
+    font-size: 80px;
+    text-align: center; }
+  section div p {
+    display: none; }
+  #nuestrosCombos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+  .vermas {
+    display: none; }
+  #section2Home {
+    height: 1200px;
+    width: 768px; }
+  #cabecera {
+    width: 768px; }
+  #pregunta {
+    display: flex;
+    height: 300px;
+    width: 768px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+  section h3 {
+    font-size: 24px;
+    width: 600px;
+    text-align: center; }
+  footer {
+    width: 100%; }
+  #section1Audio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 100px; }
+  main {
+    background: #AA46C8;
+    background: -webkit-linear-gradient(top, #AA46C8, #000000);
+    background: -moz-linear-gradient(top, #AA46C8, #000000);
+    background: linear-gradient(to bottom, #AA46C8, #000000);
+    padding-top: 80px;
+    width: 100%; }
+  .videoExterno {
+    display: none; } 
+    .galeriaAudio {
+      display: grid;
+      gap: 10rem;
+      grid-auto-rows: auto;
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+      justify-items: center;
+      padding-bottom: 100px; } 
+  
+  .navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    z-index: 300; }
+  
+    #navegador ul {
+      margin-bottom: 0;
+    }
+  
+    #pregunta {
+      height: auto;
+      width: auto;
+    }
+  
+  .h3b {
+    display: none;
+  }
+  
+    h4 {
+      width: auto;
+      padding-bottom: 30px;
+    }
+  
+  
+    .pregunta__BotonArmaTuFiesta {
+      border: 6px solid black;
+    }
+  
+    #cabecera {
+      width: auto;
+      height: auto;
+      padding-bottom: 80px;
+      padding-top: 0;
+    }
+  
+    .cabecera__titulo {
+      font-size: 30px;
+      height: auto;
+    }
+  
+    .cabecera__mensaje {
+      display: none;
+    }
+  
+    .formularioATF__tusDatos {
+      font-size: 70px;
+  
+    }
+  
+    .formularioATF {
+      display: grid;
+      grid-template-areas: 'tusdatos tusdatos' 'nombreb nombreb' 'apellidob apellidob' 'emailb emailb' 'tufiesta tufiesta' 'invitados invitados' 'donde donde' 'como como' 'opcion1 opcion1' 'pregunta2 pregunta2' 'opcion2 opcion2' 'pregunta3 pregunta3' 'opcion3 opcion3' 'ATF ATF' 'again again';
+      justify-content: center;
+      align-self: center;
+      align-content: center;
+      justify-self: center;
+      justify-items: center;
+      width: auto;
+
+    }
+  
+    .formularioATF__nombreb {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      margin-left: 10%;
+      
+    }
+
+    .nombrebb {
+      width: 90% !important;
+      text-align: center;
+    }
+  
+    .formularioATF__apellidob {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10%;
+    }
+
+    .apellidobb {
+      width: 90% !important;
+      text-align: center;
+      align-content: center;
+
+    }
+  
+    .formularioATF__emailb {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10%;
+    }
+
+    .emailbb {
+      width: 90% !important;
+      text-align: center;
+      align-content: center;
+    }
+
+    .tuFiesta {
+      font-size: 70px;
+      height: auto;
+    }
+
+    .invitados {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10%;
+    }
+
+    .invitadosb {
+      width: 90% !important;
+      text-align: center;
+      align-content: center;
+
+    }
+
+  .donde{
+    display: flex;
+      flex-direction: column;
+      margin-left: 10%;
+  }
+
+  .dondeb {
+    width: 90% !important;
+    text-align: center;
+    align-content: center;
+  }
+
+  .pregunta2 {
+    text-align: center;
+  }
+
+  .pregunta3 {
+    text-align: center;
+  }
+
+  .DerechosReservados {
+    text-align: center;
+  }
+
+  .textoFooter {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .quienesSomos {
+    display: flex;
+    flex-direction: column;
+  } 
+  .mensajeQuienes {
+    border-bottom: none;
+  }
+  .mensajeSueños {
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .imagenFiestaVasos {
+    display: none;
+  }
+
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formulario__nombre {
+    display: flex;
+   flex-direction: column;
+    margin-left: 10%;
+    justify-content: flex-start;
+  }
+
+
+  .nombrec {
+    width: 90% !important;
+   
+  }
+
+  .formulario__apellido {
+    display: flex;
+   flex-direction: column;
+    margin-left: 10%;
+  }
+
+  .apellidoc {
+    width: 90% !important;
+  }
+
+  .formulario__email {
+    display: flex;
+   flex-direction: column;
+    margin-left: 10%;
+  }
+
+  .emailc {
+    width: 90% !important;
+  }
+
+  .areaConsulta {
+    width: 90%;
+    height: 30%;
+  }
+
+  .formulario__consultaArea {
+    width: 90%;
+    height: 50%;
+  }
+
+
+
+
+
+
+
+
+}
+
+/*MEDIA QUERIES*/
+
+
+.posicion {
+  position: relative;
+  z-index: 200; }
+
+h5 {
+  font-size: 100px;
+  color: #942ab4; }
+
+.textoCarousel {
+  font-size: 30px; }
+
+.galeriaAudio {
+  display: grid;
+  gap: 10rem;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  justify-items: center;
+  text-align: center; 
+padding-bottom: 70px;}
+
+.card-title {
+  font-size: 40px; }
+
+.card {
+  background-color: rgba(255, 255, 255, 0.63); }
+
+/* Responsive para Audio  */
+@media (max-width: 320px) {
+  
+
+
+}
+
+
+
+
+/* Responsive para Audio  */
