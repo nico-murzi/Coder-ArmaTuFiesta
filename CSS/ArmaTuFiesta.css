@@ -18,7 +18,17 @@ section div div div form {
 }
 
 /*navegador*/
-#navegador ul {
+
+.navbar {
+  position: relative;
+  z-index: 200;
+}
+
+.navbar-brand span {
+  color: #b23bd6;
+}
+
+/* #navegador ul {
   background-color: #242320;
   color: white;
   font-size: x-large;
@@ -55,7 +65,7 @@ section div div div form {
       display: block; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none; } */
 
 /*navegador fin*/
 /*footer*/
@@ -520,7 +530,7 @@ footer {
   position: relative;
   z-index: 200;
   color: rgb(0, 0, 0);
-  background-color: rgba(255, 255, 255, .3);
+  background-color: rgba(255, 255, 255, .7);
   max-width: 90vw ;
   margin-left: 5vw;
   margin-right: 5vw;
@@ -546,7 +556,7 @@ h1 {
   font-size: 100px;
   font-family: 'Alfa Slab One', cursive;
   text-align: center;
-  padding-top: 40px;
+  /* padding-top: 40px; */
   padding-bottom: 40px; }
 
 h2 {
@@ -622,9 +632,11 @@ div span p {
 
 .carousel-inner {
   position: relative;
-  width: 70%;
+  width: 80vw;
   overflow: hidden;
-  margin: auto; }
+  margin: auto; 
+  border-radius: 50px;
+}
 
 .posicion {
   position: relative;
@@ -632,10 +644,14 @@ div span p {
 
 h5 {
   font-size: 5vw;
-  color: #942ab4; }
+  color: #942ab4;
+  font-family: 'Alfa Slab One', cursive;
+ }
 
 .textoCarousel {
   font-size: 2vw; }
+
+
 
 /*Carrousel fin*/
 main {
@@ -682,7 +698,7 @@ main {
   text-decoration: none;
   overflow: hidden;
   transition: 0,2s;
-  color: violet;
+  color: rgb(87, 18, 87);
   border-radius: 20px;
   z-index: 101; 
   font-size: 5vh;
