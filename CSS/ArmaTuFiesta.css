@@ -130,6 +130,13 @@ section div div div form {
     transition: all .5s;
   }
 
+  @media (max-height: 790px) {
+
+    ul.nav_list {
+      height: 100vh;
+    }
+  }
+
   nav ul li {
     display: block;
     margin: 50px 0;
