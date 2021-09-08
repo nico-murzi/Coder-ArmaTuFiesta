@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <meta name="description" content="Acá te vamos a ayudar a armar tu fiesta desde 0! Estas listo?">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Plataforma interactiva para armar tu fiesta desde 0! Vas a encontrar todo lo necesario para festejar a lo grande.">
     <meta name="keywords" content="Fiesta, Eventos, Cumpleaños, Casamientos, DJ, Sonido, Efectos, Parlantes, FX">
-    <title>ARMATUFIESTA | Armando</title>
+    <title>ARMATUFIESTA | Home</title>
     <link rel="shortcut icon" href="../Imagenes/1019px-ITunes_logo.png">
-    <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/bootstrap.css">
-    <link rel="stylesheet" href="../CSS/ArmaTuFiesta.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -22,143 +21,149 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- ICONOS DE BOOTSTRAP -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- FUENTE LOGO PRINCIPAL -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <!--HOJA DE ESTILOS PRINCIPAL -->
+    <link rel="stylesheet" href="../CSS/ArmaTuFiesta.css">
+    <!-- FUENTE MARCADOR -->
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <!-- FUENTE CARTEL -->
+    <link href="https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">Arma <span>TUFIESTA</span></a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="fa fa-bars"></span> Menu
-              </button>
-              <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav m-auto">
-                    <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="Audio.html" class="nav-link">AUDIO</a></li>
-                    <li class="nav-item"><a href="FX.html" class="nav-link">FX</a></li>
-                    <li class="nav-item active"><a href="ATF.html" class="nav-link">ArmaTuFiesta</a></li>
-                  <li class="nav-item"><a href="Nosotros.html" class="nav-link">NOSOTROS</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        <!-- <nav id="navegador">
-            <ul>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="bi bi-list"></i>
+            </label>
+            
+    
+            <label class="atf_logo">Arma <span>Tu Fiesta</span></label>
+            
+            <ul class="nav_list">
                 <li><a href="../index.html">HOME</a></li>
                 <li><a href="Audio.html">AUDIO</a></li>
                 <li><a href="FX.html">FX</a></li>
-                <li><a href="ATF.html">ARMA TU FIESTA</a></li>
+                <li><a class="active" href="ATF.html">ARMA TU FIESTA</a></li>
                 <li><a href="Nosotros.html">NOSOTROS</a></li>
             </ul>
-        </nav> -->
+        </nav>
     </header>
 
     <main>
-        <section class="titulo">
-            <h1>¡Vamos a armar tu fiesta!</h1>
-            <p>Necesitamos que nos des alguna informacion importante para que nuestros asesores armen el combo que mas
-                se adapta a tus necesidades</p>
-        </section>
+        <div class="atf_contenedor_general">
 
 
+            <div class="atf_contenedor">
+                <div class="formulario_contacto atf_contacto">
+                    <h2 class="consulta_titulo">vamos a armar <span>tu fiesta</span></h2>
+                    <h3>Necesitamos que nos des alguna informacion importante para que nuestros asesores armen el combo
+                        que mas
+                        se adapta a tus necesidades</h3>
+                    <form action="">
+                        <p>
+                            <label for="Nombre">Ingresá tu nombre</label>
+                            <input type="text" name="Nombre" id="Nombre">
+                        </p>
+                        <p>
+                            <label for="apellido">Ingresá tu apellido</label>
+                            <input type="text" name="apellido" id="apellido">
+                        </p>
+                        <p class="block">
+                            <label for="email">Ingresá tu correo electrónico</label>
+                            <input type="email" name="email" id="email">
+                        </p>
+                        <p>
+                            <label for="cantidad_invitados">¿Cuantos invitados son?</label>
+                            <input type="number" name="cantidad_invitados" id="cantidad_invitados">
+                        </p>
+                        <p>
+                            <label for="barrio">¿En qué barrio o localidad?</label>
+                            <input type="text" name="barrio" id="barrio">
+                        </p>
 
-        <form action=>
+                        <p class="block pregunta_central">
+                            <label for="tipo">¿Cómo es el lugar?</label>
+                        <p class="block respuesta_central">
+                            <span>
+                                <label for="Aire libre">Aire libre</label>
+                                <input type="radio" name="tipo" value="Aire libre" id="Aire libre">
+                            </span>
+                            <span>
+                                <label for="Cerrado">Cerrado</label>
+                                <input type="radio" name="tipo" value="Cerrado" id="Cerrado">
+                            </span>
+                            <span>
+                                <label for="Ambas">Ambas</label>
+                                <input type="radio" name="tipo" value="Ambas" id="Ambas">
+                            </span>
+                        </p>
+                        </p>
 
-            <div class="formularioATF">
+                        <p class="block pregunta_central">
+                            <label for="tipo">¿Tenes el servicio de DJ contratado?</label>
 
-                <h2 class="formularioATF__tusDatos">Tus datos</h2>
+                        <p class="block respuesta_central">
+                            <span>
+                                <label for="Aire libre">No lo tengo</label>
+                                <input type="radio" name="dj" value="Aire libre" id="Aire libre">
+                            </span>
+                            <span>
+                                <label for="Cerrado">Si lo tengo</label>
+                                <input type="radio" name="dj" value="Cerrado" id="Cerrado">
+                            </span>
+                            <span>
+                                <label for="Ambas">Más info</label>
+                                <input type="radio" name="dj" value="Ambas" id="Ambas">
+                            </span>
+                        </p>
 
-                <div class="formularioATF__nombreb">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" placeholder="Ingresá tu nombre" id="nombre" style="height: 30px;"
-                        class="nombrebb">
+                        </p>
+
+                        <p class="block pregunta_central">
+                            <label for="tipo">¿Te interesaría contratar el servicio de fotografía?</label>
+
+                        <p class="block respuesta_central">
+                            <span>
+                                <label for="Aire libre">No lo quiero</label>
+                                <input type="radio" name="foto" value="Aire libre" id="Aire libre">
+                            </span>
+                            <span>
+                                <label for="Cerrado">Si lo quiero</label>
+                                <input type="radio" name="foto" value="Cerrado" id="Cerrado">
+                            </span>
+                            <span>
+                                <label for="Ambas">Más info</label>
+                                <input type="radio" name="foto" value="Ambas" id="Ambas">
+                            </span>
+                        </p>
+
+                        </p>
+
+
+                        <p class="block">
+                            <button type="submit">
+                                ARMAR MI FIESTA
+                            </button>
+                        </p>
+
+                    </form>
                 </div>
-                <div class="formularioATF__apellidob">
-                    <label for="apellido">Apellido</label>
-                    <input type="text" name="apellido" placeholder="Ingresá tu apellido" id="apellido"
-                        style="height: 30px;" class="apellidobb">
-                </div>
-                <div class="formularioATF__emailb">
-                    <label for="email">Email</label>
-                    <input type="email" name="_replyto" placeholder="Ingresa tu correo" id="email"
-                        style="height: 30px; width: 600px;" class="emailbb">
-                </div>
-
-
-
-                <h2 class="tuFiesta">Tu fiesta</h2>
-
-
-                <div class="invitados">
-                    <label for="invitados">Cantidad de invitados</label>
-                    <input type="number" name="invitados" placeholder="Ingresá la cantidad de invitados" id="invitados"
-                        style="height: 30px;" class="invitadosb">
-                </div>
-                <div class="donde">
-                    <label for="lugar">¿En donde será tu fiesta?</label>
-                    <input type="text" name="lugar" placeholder="Ingresa el Barrio o Localidad" id="lugar"
-                        style="height: 30px;" class="dondeb">
-                </div>
-
-
-                <h3 class="como">¿Cómo es el lugar?</h3>
-
-                <div class="opcion1">
-                    <label for="Aire libre">Aire libre</label>
-                    <input type="radio" name="tipo" value="Aire libre" id="Aire libre">
-
-                    <label for="Cerrado">Cerrado</label>
-                    <input type="radio" name="tipo" value="Cerrado" id="Cerrado">
-
-                    <label for="Ambas">Ambas</label>
-                    <input type="radio" name="tipo" value="Ambas" id="Ambas">
-                </div>
-
-
-
-                <h3 class="pregunta2">¿Tenes el servicio de dj contratado?</h3>
-
-                <div class="opcion2">
-                    <label for="Aire libre">Si</label>
-                    <input type="radio" name="pregunta2" value="Aire libre" id="Aire libre">
-                    <label for="Cerrado">No</label>
-                    <input type="radio" name="pregunta2" value="Cerrado" id="Cerrado">
-                    <label for="Ambas">Estoy averiguando</label>
-                    <input type="radio" name="pregunta2" value="Ambas" id="Ambas">
-                </div>
-
-
-                <h3 class="pregunta3">¿Te interesaria contratar el servicio de fotografia y video?</h3>
-
-                <div class="opcion3">
-                    <label for="Aire libre">Si</label>
-                    <input type="radio" name="pregunta3" value="Aire libre" id="Aire libre">
-                    <label for="Cerrado">No</label>
-                    <input type="radio" name="pregunta3" value="Cerrado" id="Cerrado">
-                    <label for="Ambas">Quiero mas info</label>
-                    <input type="radio" name="pregunta3" value="Ambas" id="Ambas">
-                </div>
-
-
-
-
-                <input type="submit" value="ARMA TU FIESTA" class="ATF" style="width: 200px; height: 50px;">
-                <input type="reset" value="Empezar de nuevo" class="again">
-
             </div>
-
-        </form>
+        </div>
     </main>
 
     <footer>
         <div class="redesContainer">
             <ul>
-                <li><a href="" class="facebook"><i class="bi bi-facebook"></i></a></li>
-                <li><a href="" class="twitter"><i class="bi bi-twitter"></i></a></li>
-                <li><a href="" class="instagram"><i class="bi bi-instagram"></i></a></li>
-                <li><a href="" class="youtube"><i class="bi bi-youtube"></i></a></li>
+                <li><a href="" class="facebook redes"><i class="bi bi-facebook"></i></a></li>
+                <li><a href="" class="twitter redes"><i class="bi bi-twitter"></i></a></li>
+                <li><a href="" class="instagram redes"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="" class="youtube redes"><i class="bi bi-youtube"></i></a></li>
             </ul>
         </div>
         <div class="DerechosReservados">
