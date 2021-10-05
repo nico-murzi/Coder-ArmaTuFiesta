@@ -441,6 +441,10 @@ footer {
   color: #a945c7;
 }
 
+.respuestaJS span {
+  color: #a945c7;
+}
+
 .formulario_contenedor {
   box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
   font-family:'Bebas Neue', cursive;
