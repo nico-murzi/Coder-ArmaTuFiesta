@@ -176,13 +176,27 @@ if (bandera1 == true) {
 
 // Se agregan los resultados al HTML por medio de DOM
 
-const respuesta = document.querySelector(".atf_contenedor_general");
+if (bandera1 == true) {
 
-respuesta.innerHTML += `<div class="atf_contenedor_general">
-<div class="atf_contenedor">
-  <h2 class="consulta_titulo">bienvenido ${user} <span>tu presupuesto esta listo</span></h2>
-  <h3 class="respuestaJS">Su fiesta es para <span>${cantidadInvitados}</span> invitados<h3>
-  <h3 class="respuestaJS">El precio total del audio es de <span>$${precioAudio}</span></h3>
-  <h3 class="respuestaJS">Le enviaremos el presupuesto a su correo <span>${email}</span></h3>
-  </div>
-  </div>`;
+  const respuesta = document.querySelector(".atf_contenedor_general");
+  
+  respuesta.innerHTML += `<div class="atf_contenedor_general">
+  <div class="atf_contenedor">
+    <h2 class="consulta_titulo">bienvenido ${user} <span>tu presupuesto esta listo</span></h2>
+    <h3 class="respuestaJS">Su fiesta es para <span>${cantidadInvitados}</span> invitados<h3>
+    <h3 class="respuestaJS">El precio total del audio es de <span>$${precioAudio}</span></h3>
+    <h3 class="respuestaJS">Le enviaremos el presupuesto a su correo <span>${email}</span></h3>
+    </div>
+    </div>`;
+
+} else {
+
+  const respuesta = document.querySelector(".atf_contenedor_general");
+
+  respuesta.innerHTML += `<div class="atf_contenedor_general">
+  <div class="atf_contenedor">
+    <h2 class="consulta_titulo">Superaste el limite de intentos <span>refresca la pestaña</span></h2>
+    </div>
+    </div>`;
+}
+ 
