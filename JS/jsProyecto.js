@@ -137,7 +137,7 @@ $('.ATFButton').on('click', () => {
   
   if (datosCompletos == true) {
 
-    $('.atf_contenedor_general').append(`<div class="atf_contenedor_general">
+    $('.atf_contenedor_general').append(`<div style="display: none" class="atf_contenedor_general">
     <div class="atf_contenedor">
     <div class="formulario_contacto atf_contacto">
     <h2 class="consulta_titulo tituloJS">bienvenido ${nombre} ${apellido} <span>tu presupuesto esta listo</span></h2>
@@ -147,6 +147,7 @@ $('.ATFButton').on('click', () => {
     </div>
     </div>
     </div>`);
+    $('.atf_contenedor_general').fadeIn();
   
     // const respuesta = document.querySelector(".atf_contenedor_general");
   
