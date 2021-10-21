@@ -441,9 +441,22 @@ footer {
   color: #a945c7;
 }
 
+/* DOM JS */
+
+.respuestaJS {
+  font-size: 2em;
+  padding-bottom: 20px;
+}
+
 .respuestaJS span {
   color: #a945c7;
 }
+
+.tituloJS {
+  padding-bottom: 1em ;
+}
+
+/* DOM JS */
 
 .formulario_contenedor {
   box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
