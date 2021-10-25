@@ -50,6 +50,8 @@ section div div div form {
    display: inline-block;
    line-height: 60px;
    margin: 0 15px;
+   padding: 0 15px;
+   
  }
 
  nav ul li a {
@@ -456,7 +458,7 @@ footer {
   padding-bottom: 1em ;
 }
 
-/* DOM JS */
+/* DOM JS FIN*/
 
 .formulario_contenedor {
   box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
@@ -507,6 +509,24 @@ footer {
   color: #000000;
   border: 0;
   padding: 1em;
+}
+
+/* Boton ir a pagar */
+
+.irAPagar {
+  background: #942ab4;
+  color: #000000;
+  border: 0;
+  padding: 1em;
+  grid-column: 1 / 3;
+}
+
+.irAPagar:hover,
+.irAPagar:focus {
+  background: #bf78d4;
+  color: #fff;
+  transition: background-color 1s ease-out;
+  outline: 0;
 }
 
 .formulario_contacto form button:hover,

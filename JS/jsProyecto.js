@@ -3,16 +3,18 @@
 
 
 class Usuario {
-  constructor(user, email, wattsTotales, precioAudio) {
+  constructor(user, email, wattsTotales, precioAudio, cantidad, id, img) {
     this.user = user;
     this.email = email;
     this.wattsTotales = wattsTotales;
     this.precioAudio = precioAudio;
+    this.cantidad = cantidad;
+    this.id = id;
+    this.img = img;
   }
 }
 
-
-//  Validacion de identidad para entrada al sitio
+const Usuarios = []
 
 let bandera1 = true;
 let wattsNecesarios;
@@ -25,6 +27,37 @@ let apellido;
 let lugarAbierto;
 let lugarCerrado;
 let datosCompletos = true;
+
+// Funcion de Mercado Pago
+
+async function pagarConFe (){
+  const productosToMp = Usuarios.map(Element => {
+      let nuevoElemento = {
+          title: Element.user,
+          description: Element.wattsTotales,
+          picture_url: Element.img,
+          category_id: Element.id,
+          quantity: Element.cantidad,
+          currency_id: "ARS",
+          unit_price: Element.precioAudio,
+      }
+      return nuevoElemento
+  })
+
+  let response = await fetch("https://api.mercadopago.com/checkout/preferences",
+  {
+      method: "POST",
+      headers: {
+          Authorization: "Bearer TEST-680675151110839-052307-64069089337ab3707ea2f547622a1b6a-60191006"
+      },
+      body: JSON.stringify({
+          items: productosToMp,
+      })
+  })
+
+  const data = await response.json()
+  window.open(data.init_point, "_blank")
+}
 
 
 // Se agregan los resultados al HTML por medio de DOM
@@ -129,7 +162,8 @@ $('.ATFButton').on('click', () => {
     
   }
   
-  let newUser = new Usuario(`${nombre} ${apellido}`, email, wattsNecesarios, precioAudio)
+  let newUser = new Usuario(`Audio para tu fiesta`, email, wattsNecesarios, precioAudio, 1, "1", "f");
+  Usuarios.push(newUser);
   console.log(newUser);
   localStorage.setItem("usuario", JSON.stringify(newUser));
   
@@ -144,6 +178,9 @@ $('.ATFButton').on('click', () => {
     <h3 class="respuestaJS">Su fiesta es para <span>${cantidadInvitados}</span> invitados<h3>
     <h3 class="respuestaJS">El precio total del audio es de <span>$${precioAudio}</span></h3>
     <h3 class="respuestaJS">Le enviaremos el presupuesto a su correo <span>${email}</span></h3>
+    <form><button type='button' class="ATFButton irAPagar">
+    IR A PAGAR
+    </button></form>
     </div>
     </div>
     </div>`);
@@ -174,6 +211,12 @@ $('.ATFButton').on('click', () => {
   }
 
   $('.principal').slideUp(1200);
+
+  $('.irAPagar').on('click', () => {
+
+    pagarConFe ();
+  })
+
 });
 
 
