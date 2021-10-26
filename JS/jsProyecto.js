@@ -211,6 +211,7 @@ $('.ATFButton').on('click', () => {
   }
 
   $('.principal').slideUp(1200);
+  $('html, body').animate({scrollTop : 0});
 
   $('.irAPagar').on('click', () => {
 
