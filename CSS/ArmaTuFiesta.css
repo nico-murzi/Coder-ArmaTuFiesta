@@ -471,11 +471,12 @@ footer {
 
 .formulario_contacto {
   background-color: #222222;
-  font-size: medium;
+  font-size: large;
 }
 
 .formulario_info {
-  background-color:rgba(0, 0, 0)
+  background-color:rgba(0, 0, 0);
+  font-size: large;
 }
 
 .formulario_contacto form {
