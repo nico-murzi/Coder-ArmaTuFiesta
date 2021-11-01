@@ -17,6 +17,71 @@ section div div div form {
   gap: 10%;
 }
 
+/* Card sugeridas en ATF */
+
+.contenedorSugerido {
+  width: 100%;
+  display: flex;
+  max-width: 2100px;
+  
+  padding: 0 150px 100px 150px;
+ 
+}
+
+.cardSugerido {
+  width: 100%;
+  margin: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #222222;
+  color: white;
+  font-family:'Bebas Neue', cursive;
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+  
+  
+  
+
+}
+
+.cardSugerido img {
+  width: 100%;
+  height: 300px;
+  border-top: 10px solid #222222
+  
+}
+
+.contenidoSugerido {
+  padding: 15px;
+  text-align: center;
+  
+}
+
+.contenidoSugerido p {
+  font-size: x-large;
+  
+}
+
+.contenidoSugerido a {
+  border: 1px solid black;
+  padding: 10px;
+  text-decoration: none;
+  background-color: #942ab4;
+  display: block;
+  color: #000000;
+  font-size: x-large;
+  transition: 0.3s;
+  
+}
+
+.contenidoSugerido a:hover,
+.contenidoSugerido a:focus {
+  background: #ae89b9;
+  color: #fff;
+  transition: background-color 1s ease-out;
+  outline: 0;
+  transition: 0.5s;
+}
+
 /*navegador*/
 
  nav {
@@ -455,7 +520,7 @@ footer {
 }
 
 .tituloJS {
-  padding-bottom: 1em ;
+  padding-bottom: 1em;
 }
 
 /* DOM JS FIN*/
@@ -585,7 +650,7 @@ footer {
   margin-right: auto;
   padding: 1.5em;
   color: white;
-  padding-bottom: 20vh;
+  padding-bottom: 5vh;
 }
 
 .atf_contenedor > * {

@@ -72,6 +72,8 @@ $('.ATFButton').on('click', () => {
   cantidadInvitados = $("#cantidad_invitados").val();
   lugarAbierto = document.getElementById("Aire libre").checked;
   lugarCerrado = document.getElementById("Cerrado").checked;
+  fotografo = document.getElementById("afirmativo").checked;
+  dj = document.getElementById("sinDJ").checked;
   datosCompletos = true;
   
   if (datosCompletos == true) {
@@ -185,7 +187,17 @@ $('.ATFButton').on('click', () => {
     </div>
     </div>`);
     $('.atf_contenedor_general').fadeIn();
-  
+
+    if (dj == true) {
+      traerDatosDj ();
+    }
+    if (fotografo == true) {
+      traerDatosFotos ();
+    }
+
+
+  // Forma sin Jquery
+
     // const respuesta = document.querySelector(".atf_contenedor_general");
   
     // respuesta.innerHTML += `<div class="atf_contenedor_general">
@@ -199,15 +211,6 @@ $('.ATFButton').on('click', () => {
     //         </div>
     //         </div>`;
   
-  } else {
-  
-    const respuesta = document.querySelector(".atf_contenedor_general");
-  
-    respuesta.innerHTML += `<div class="atf_contenedor_general">
-            <div class="atf_contenedor">
-              <h2 class="consulta_titulo">Superaste el limite de intentos <span>refresca la pestaña</span></h2>
-              </div>
-              </div>`;
   }
 
   $('.principal').slideUp(1200);
@@ -221,3 +224,53 @@ $('.ATFButton').on('click', () => {
 });
 
 
+// Funciones para traer sugerencias de ML
+
+function traerDatosFotos (){
+  $.get(`https://api.mercadolibre.com/sites/MLA/search?q=Book Pre 15 Años Promo! Sesion Fotos+libro De Firmas+video`,
+  function (resultado, status){
+    if (status === "success") {
+      let itemsSugeridos = resultado.results;
+      for (let i=0; i<2; i++) {
+        $(`.contenedorSugerido`).append(`
+        <div class="cardSugerido">
+                <figure>
+                    <img src="${resultado.results[i].thumbnail}">
+                </figure>
+        <div class="contenidoSugerido">
+              <h3>${resultado.results[i].title}</h3>
+              <p>$ ${resultado.results[i].price}</p>
+              <a href="${resultado.results[i].permalink}" target="_blank">COMPRAR</a>
+        </div>
+        </div>
+        `     
+        )}
+    }
+  }
+  )
+}
+
+
+function traerDatosDj (){
+$.get(`https://api.mercadolibre.com/sites/MLA/search?q=egresados jardín y primaria: animación, shows y servicios`,
+function (resultado, status){
+  if (status === "success") {
+    let itemsSugeridos2 = resultado.results;
+    for (let i=0; i<2; i++) {
+      $(`.contenedorSugerido`).append(`
+      <div class="cardSugerido">
+              <figure>
+                  <img src="${resultado.results[i].thumbnail}">
+              </figure>
+      <div class="contenidoSugerido">
+            <h3>${resultado.results[i].title}</h3>
+            <p>$ ${resultado.results[i].price}</p>
+            <a href="${resultado.results[i].permalink}" target="_blank">COMPRAR</a>
+      </div>
+      </div>
+      `
+      )}
+  }  
+}
+)
+}
